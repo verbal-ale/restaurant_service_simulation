@@ -1,14 +1,14 @@
-item_name,category,desc,price
-Black forest pavlova,Puddings,"wild Morello cherries, sour cherry sorbet, dark chocolate mousse",9.5
-Apple mille-feuille,Puddings,"caramelised apples, Calvados cream, apple sorbet",9
-Rhubarb & custard tart,Puddings,rhubarb sorbet,9
-Sticky toffee pudding,Puddings,clotted cream,9.5
-Peanut butter shortbread,Puddings,"salted caramel ice cream, Original Beans chocolate",9
-Irish coffee tiramisu,Puddings,"Bailey's mousse, Irish whiskey, coffee ice cream",9.5
-Sticky toffee sundae,Ice-Cream & Sorbet,"clotted cream ice cream, sticky toffee sponge, toffee sauce",9
-Ice-cream scoops,Ice-Cream & Sorbet,clotted cream; salted caramel,4
-Sorbet scoops,Ice-Cream & Sorbet,apple; cherry; rhubarb,4
-Salted caramel rolos (x1),Chocolates,,2.5
-Salted caramel rolos (x3),Chocolates,,7.5
-Salted caramel rolos (x8),Chocolates,,15
-I.J. Mellis Cheeses,Cheese,"Quince paste, oat biscuits",4
+item_uuid,item_name,category,desc,price
+e5c74ec3,Black forest pavlova,Puddings,"wild Morello cherries, sour cherry sorbet, dark chocolate mousse",9.5
+c042c563,Apple mille-feuille,Puddings,"caramelised apples, Calvados cream, apple sorbet",9
+e4655bc0,Rhubarb & custard tart,Puddings,rhubarb sorbet,9
+d093b84d,Sticky toffee pudding,Puddings,clotted cream,9.5
+3644590d,Peanut butter shortbread,Puddings,"salted caramel ice cream, Original Beans chocolate",9
+86948921,Irish coffee tiramisu,Puddings,"Bailey's mousse, Irish whiskey, coffee ice cream",9.5
+77602af6,Sticky toffee sundae,Ice-Cream & Sorbet,"clotted cream ice cream, sticky toffee sponge, toffee sauce",9
+52c192df,Ice-cream scoops,Ice-Cream & Sorbet,clotted cream; salted caramel,4
+522a808a,Sorbet scoops,Ice-Cream & Sorbet,apple; cherry; rhubarb,4
+881e25f1,Salted caramel rolos (x1),Chocolates,,2.5
+936b320c,Salted caramel rolos (x3),Chocolates,,7.5
+350b58c0,Salted caramel rolos (x8),Chocolates,,15
+cf8ca992,I.J. Mellis Cheeses,Cheese,"Quince paste, oat biscuits",4

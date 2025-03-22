@@ -9,10 +9,15 @@ These are the raw data menu files used to simulate orders.
 - `cocktails_and_beer_menu.csv` contains Alcoholic and Non Alcoholic Drinks
 - `wine_menu.csv` contains The full Wine List
 
+The `.csv`'s were extracted from the restaurant's website using ChatGPT, given unique IDs and imported into a Google Cloud Storage bucket. The data was then loaded into tables in a BigQuery database. 
+
+<br>
+<br>
 # Data Card
 
 | Field          | Definition |
 |---------------|------------|
+| **item_uuid**  | A unique item id generated using the Pyhton `uuid` library. |
 | **item_name**  | The name of the food or drink item. |
 | **category**   | The category of the item (e.g. Red Wine, Beers & Cider, Large Cuts). |
 | **desc**       | A brief description of the item, including notable characteristics. |
@@ -21,3 +26,4 @@ These are the raw data menu files used to simulate orders.
 | **serving_size** | The size of the serving in milliliters (e.g. 125ml, 750ml, 1500ml). |
 | **price**      | The price of the item in £. |
 | **price_type** | Indicates whether the price is per 100g or per each item. |
+
