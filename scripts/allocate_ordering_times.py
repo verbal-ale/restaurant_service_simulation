@@ -4,7 +4,9 @@ import datetime
 import json
 import os
 
-config_file = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sim_config.json"))
+script_dir = os.path.dirname(os.path.abspath(__file__))
+config_file = os.path.join(script_dir, "..", "sim_config.json")
+config_file = os.path.abspath(config_file)  # normalize
 
 
 

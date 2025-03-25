@@ -7,7 +7,7 @@ import sys
 
 file_counter = 1 # used to name file logs
 verbose = False # turn to true if you want to see what the structures look like
-# Safely get config path relative to script
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 config_file = os.path.join(script_dir, "..", "sim_config.json")
 config_file = os.path.abspath(config_file)  # normalize
