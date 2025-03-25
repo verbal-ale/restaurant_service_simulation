@@ -2,7 +2,7 @@ name: Daily BigQuery Job
 
 on:
   schedule:
-    - cron: '00 10 * * *'  # Every day at 23:20 UTC
+    - cron: '10 0 * * *'  # Every day at 23:20 UTC
   workflow_dispatch:
 
 jobs:
