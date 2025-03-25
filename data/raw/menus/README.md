@@ -9,7 +9,7 @@ These are the raw data menu files used to simulate orders.
 - `cocktails_and_beer_menu.csv` contains Alcoholic and Non Alcoholic Drinks
 - `wine_menu.csv` contains The full Wine List
 
-The `.csv`'s were extracted from the restaurant's website using ChatGPT, given unique IDs and imported into a Google Cloud Storage bucket. The data was then loaded into tables in a BigQuery database. 
+The `.csv`'s were extracted from the restaurant's website, given unique IDs and imported into a Google Cloud Storage bucket. The data was then loaded into tables in a BigQuery database. 
 
 <br>
 <br>
