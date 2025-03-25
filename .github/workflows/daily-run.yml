@@ -2,7 +2,7 @@ name: Daily BigQuery Job
 
 on:
   schedule:
-    - cron: '29 22 * * *'  # Every day at 21:50 UTC
+    - cron: '20 23 * * *'  # Every day at 23:20 UTC
   workflow_dispatch:
 
 jobs:
@@ -35,6 +35,6 @@ jobs:
           ls -l
           echo "📂 Listing full tree..."
           find . -type f
-          
+
       - name: Run simulation
         run: python scripts/run_sim.py
