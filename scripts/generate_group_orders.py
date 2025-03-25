@@ -6,7 +6,7 @@ import os
 
 file_counter = 1 # used to name file logs
 verbose = False # turn to true if you want to see what the structures look like
-config_file = "../sim_config.json" 
+config_file = "/../sim_config.json" 
 
 def generate_customer_order_intention():
     """
