@@ -4,8 +4,8 @@ import datetime
 import json
 import os
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-config_file = os.path.join(script_dir, "..", "sim_config.json")
+config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sim_config.json")
+
 
 def allocate_booking_times(group_orders):
     """
