@@ -1,0 +1,65 @@
+{
+    "n_alc_drinks": [0.50, 0.25, 0.125],
+    "n_wine_servings": [0.50, 0.33, 0.25],
+    "n_dessert_wine_servings": [0.40, 0.30, 0.20],
+    "n_non_alc_drinks": [0.60, 0.60],
+    "b_starter": [0.66],
+    "b_main": [1.0],
+    "b_dessert": [0.50],
+    "customer_count_range": {
+        "0": [120, 170],  
+        "1": [100, 130],  
+        "2": [100, 130],  
+        "3": [100, 130],  
+        "4": [180, 200],  
+        "5": [180, 250],  
+        "6": [110, 150]   
+    },
+    "categories": {
+        "alc_drinks": ["The Sacred Six", "Ultimate Steakhouse Cocktails", "Time & A Place", "Beers & Cider"],
+        "non_alc_drinks": ["Lo & No Alc"],
+        "starters": ["Starters"],
+        "mains": ["Mains", "Large Cuts", "Steaks"],
+        "sides": ["Sides"],
+        "sauces": ["Sauces"],
+        "extras": ["Extras"],
+        "desserts": ["Puddings", "Ice-Cream & Sorbet", "Chocolates", "Cheese"],
+        "wine": ["Champagne & Sparkling", "White Wines", "Rose Wines", "Red Wines", "Rarities", "Bordeaux", "Burgundy", "Magnums"],
+        "dessert_wine": ["Dessert Wines", "Port & Sherry"]
+    },
+    "wine_serving_sizes": {
+        "wine_serving": 250,
+        "dessert_wine_serving": 70
+    },
+    "chance_of_ordering_an_extra":{
+        "min_chance": 0.33,
+        "max_chance": 0.66
+    },
+    "two_top_tables":[1, 4, 5, 6, 11, 12, 13, 14, 21, 42, 43, 56, 47, 61, 63, 64, 67, 68],
+    "four_top_tables":[2, 3, 7, 8, 9, 10, 15, 16, 22, 23, 24, 25, 26, 27, 31, 32, 33, 34, 35, 41, 44, 45, 48, 53, 54, 55, 62, 65, 66],
+    "six_top_tables":[28, 29, 51, 52]
+    ,
+    "opening_time": 17,
+    "last_booking": 21,
+    "ideal_booking_time": 20,
+    "turn_time_two_top": 90,
+    "turn_time_four_top": 150,
+    "turn_time_six_top": 180,
+    "initial_drinks_order_wait_time_min": 10,
+    "initial_drinks_order_wait_time_max": 15,
+    "drink_round_prod_time": 10,
+    "drink_consumption_time_min": 15,
+    "drink_consumption_time_max": 25,
+    "initial_food_order_wait_time_min": 15,
+    "initial_food_order_wait_time_max": 25,
+    "starters_consumption_time_min": 12,
+    "starters_consumption_time_max": 15,
+    "mains_prep_time_min": 30,
+    "mains_prep_time_max": 40,
+    "mains_consumption_time_min": 30,
+    "mains_consumption__time_max": 40,
+    "desserts_order_time_min": 2,
+    "desserts_order_time_max": 6,
+    "merge_orders_timeframe": 300
+
+}
