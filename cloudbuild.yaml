@@ -1,27 +1,29 @@
 steps:
-  # Step 1: Install Python dependencies
   - name: 'python:3.12'
     id: 'Install dependencies'
     entrypoint: pip
     args: ['install', '-r', 'requirements.txt']
 
-  # Step 2: Write service account JSON from Secret Manager to file
   - name: 'alpine'
-    id: 'Create service account file'
+    id: 'Write service account key'
     entrypoint: sh
+    env:
+      - 'SERVICE_ACCOUNT_KEY'
     args:
       - '-c'
       - |
+        mkdir -p credentials
         echo "$SERVICE_ACCOUNT_KEY" > credentials/annular-mesh-453913-r6-98bf2733520c.json
 
-  # Step 3: Run your main.py script
   - name: 'python:3.12'
     id: 'Run simulation'
     entrypoint: python
     args: ['main.py']
 
-# Provide secret as environment variable
 availableSecrets:
   secretManager:
     - versionName: projects/annular-mesh-453913-r6/secrets/SERVICE_ACCOUNT_KEY/versions/latest
       env: SERVICE_ACCOUNT_KEY
+
+options:
+  logging: CLOUD_LOGGING_ONLY
