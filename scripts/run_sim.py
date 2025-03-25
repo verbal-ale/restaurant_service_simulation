@@ -96,5 +96,5 @@ if __name__ == "__main__":
     group_orders = generate_final_group_orders(master_df)
     group_orders = allocate_ordering_times(group_orders)
 
-    save_orders_summary_csv(group_orders)
-    # save_orders_to_bigquery(group_orders)
+    #save_orders_summary_csv(group_orders)
+    save_orders_to_bigquery(group_orders)
