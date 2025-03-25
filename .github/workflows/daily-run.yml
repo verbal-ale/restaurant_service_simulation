@@ -1,0 +1,32 @@
+name: Daily BigQuery Job
+
+on:
+  schedule:
+    - cron: '50 21 * * *'  # Every day at 21:50 UTC
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Decode service account key
+        run: |
+          echo "${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}" | base64 --decode > annular-mesh-453913-r6-98bf2733520c.json
+
+      - name: Set GOOGLE_APPLICATION_CREDENTIALS
+        run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/annular-mesh-453913-r6-98bf2733520c.json" >> $GITHUB_ENV
+
+      - name: Run script
+        run: python main.py

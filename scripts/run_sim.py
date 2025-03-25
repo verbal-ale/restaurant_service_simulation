@@ -2,7 +2,6 @@ from generate_group_orders import generate_final_group_orders
 from allocate_ordering_times import allocate_ordering_times
 from google.cloud import bigquery
 
-import google.auth
 import os
 import pandas as pd
 import uuid
@@ -75,9 +74,7 @@ def save_orders_to_bigquery(group_orders):
 
 if __name__ == "__main__":
     # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "../credentials/annular-mesh-453913-r6-98bf2733520c.json"
-    
-    credentials, project = google.auth.default()
-    client = bigquery.Client(credentials=credentials, project=project)
+    client = bigquery.Client()
 
     try:
         ala_carte_data = client.query("SELECT * FROM `restaurant_data.a_la_carte_menu`").to_dataframe()
