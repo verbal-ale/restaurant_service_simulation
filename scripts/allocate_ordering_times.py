@@ -2,8 +2,10 @@
 import random
 import datetime
 import json
+import os
 
-config_file = "../sim_config.json" 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+config_file = os.path.join(script_dir, "..", "sim_config.json")
 
 def allocate_booking_times(group_orders):
     """
