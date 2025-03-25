@@ -2,7 +2,7 @@ name: Daily BigQuery Job
 
 on:
   schedule:
-    - cron: '20 23 * * *'  # Every day at 23:20 UTC
+    - cron: '00 10 * * *'  # Every day at 23:20 UTC
   workflow_dispatch:
 
 jobs:
@@ -27,14 +27,6 @@ jobs:
 
       - name: Set GOOGLE_APPLICATION_CREDENTIALS
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/annular-mesh-453913-r6-98bf2733520c.json" >> $GITHUB_ENV
-
-      - name: Show directory tree for debugging
-        run: |
-          echo "📁 Current directory: $(pwd)"
-          echo "📂 Listing repo contents..."
-          ls -l
-          echo "📂 Listing full tree..."
-          find . -type f
-
+        
       - name: Run simulation
         run: python scripts/run_sim.py
