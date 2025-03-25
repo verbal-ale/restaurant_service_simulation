@@ -2,12 +2,21 @@ import random
 import json
 import datetime
 import os
+import sys
 
 
 file_counter = 1 # used to name file logs
 verbose = False # turn to true if you want to see what the structures look like
-config_file = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sim_config.json"))
+# Safely get config path relative to script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+config_file = os.path.join(script_dir, "..", "sim_config.json")
+config_file = os.path.abspath(config_file)  # normalize
 
+print("🔍 Looking for config at:", config_file)
+
+if not os.path.exists(config_file):
+    print("❌ sim_config.json not found at:", config_file)
+    sys.exit(1)
 
 
 def generate_customer_order_intention():
