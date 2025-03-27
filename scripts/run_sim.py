@@ -73,7 +73,7 @@ def save_orders_to_bigquery(group_orders):
         print("Data successfully inserted into BigQuery!")
 
 if __name__ == "__main__":
-    # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "../credentials/annular-mesh-453913-r6-98bf2733520c.json"
+    
     client = bigquery.Client()
 
     try:
@@ -91,7 +91,6 @@ if __name__ == "__main__":
     wine_df = pd.DataFrame(wine_data)
 
     master_df = pd.concat([ala_carte_df, desserts_df, drinks_df, wine_df], ignore_index=True)
-    master_df.to_csv("master_df_export.csv", index=False)
 
     group_orders = generate_final_group_orders(master_df)
     group_orders = allocate_ordering_times(group_orders)
