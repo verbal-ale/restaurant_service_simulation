@@ -52,8 +52,8 @@ def allocate_booking_times(group_orders):
         potential_starts.append(current)
         current += datetime.timedelta(minutes=15)
     
-    # We want times closest to config["opening_time"] first.
-    ideal = datetime.datetime.combine(today, datetime.time(config["opening_time"], 0))
+    # We want times closest to config["ideal_booking_time"] first.
+    ideal = datetime.datetime.combine(today, datetime.time(config["ideal_booking_time"], 0))
     potential_starts.sort(key=lambda t: abs((t - ideal).total_seconds()))
     
     # For each group, determine duration and candidate tables based on guest count.
