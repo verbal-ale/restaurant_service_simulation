@@ -119,5 +119,5 @@ This will:
 
 ## 📄 License
 
-This project is for educational and internal use. Customize as needed for production.
+This project is for educational and internal use. Customise as needed for production.
 
